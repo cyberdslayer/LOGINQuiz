@@ -1,0 +1,28 @@
+
+
+
+<div class = "container flex justify-center ">
+
+{% comment %} {% extends 'base.html' %}  {% endcomment %}
+
+
+<div>
+
+{% block title  %} Home {% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+    hi {{ user.username }}!
+
+    <p> <a href="{% url 'logout' %}"> Log Out </a> </p>
+
+{% else %}
+    <p> You are logged out </p>
+    <a href="{% url 'login' %}"> Login </a>
+
+{% endif %}
+{% endblock %}
+</div>
+
+
+</div>
+        

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    <nav class=" absolute bg-[rgba(23,155,177,0.7)] py-3 backdrop-blur-sm md:bg-transparent   w-full  ">
+        <div class=" container relative mx-auto md:flex justify-between items-center  ">
+            <div class="flex justify-between items-center  w-full">
+                <Span class="logo text-2xl mx-4 md:pt-4 "><b>Shankhnaath</b></Span>
+                <span class="text-3xl mx-2 cursor-pointer md:hidden block">
+                    <i class=" fa-solid fa-bars " name="menu" onclick="Menu(this)"></i>
+                </span>
+            </div>
+            <div class="menu  flex md:justify-end  w-full items-center  ">
+                <ul class="mx-4   md:flex items-center justify-center md:text-center  md:z-auto md:static   left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100  top-[-400px] transition-all ease-in duration-500 hidden">
+                    <li class="mx-4  md:my-0 ">
+                        <a href="#"class="text-xl   underline decoration-[#179bb1] hover: underline-offset-8">
+                            Home
+                        </a></li>
+                    <li class="mx-4  md:my-0"><a href="#"
+                            class="text-xl  decoration-[#179bb1] hover:underline underline-offset-8">Schedule</a></li>
+                    <li class="mx-4  md:my-0"><a href="#"
+                            class="text-xl   decoration-[#179bb1] hover:underline underline-offset-8">Guests</a></li>
+                    <li class="mx-4  md:my-0"><a href="#"
+                            class="text-xl  decoration-[#179bb1] hover:underline underline-offset-8">About</a></li>
+                    <li class="mx-4  md:my-0"><a href="#"
+                            class="text-xl  decoration-[#179bb1] hover:underline underline-offset-8">ContactUs</a></li>
+
+                   
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div>
+
+        <main>
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+        
+    </div>
+
+
+    
+</body>
+
+</html>
